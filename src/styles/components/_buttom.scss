@@ -1,0 +1,61 @@
+.btn{
+    background-color: transparent;
+    border: none;
+    color: $white;
+    cursor: pointer;
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+
+    &:focus{
+        outline: none;
+        border: 1px solid $primary; 
+    }
+}
+
+.btn-block{
+    width: 100%;
+    flex: 0 0 calc(33.3% - 1rem);
+    margin-top: 1.5rem;
+    @include sm{
+        margin-top: 2rem;
+        flex: 0 0 calc(50% - 1rem);
+    }
+}
+
+.btn-secondary{
+    background-color: $secondary;
+    transition: .3s all ease-in-out;
+    &:hover{
+        background-color: $primary;
+        color: $light1;
+    }
+}
+.btn-light{
+    text-align: center;
+    color: $dark2;
+    background-color: $light2;
+    transition: .3s all ease-in-out;
+    &:focus{
+        color: $secondary;
+    }
+}
+
+.btn-reset{
+    background-color: $primary;
+    color: $secondary;
+    font-size: 2rem;
+    flex: 0 0 15%;
+    transition: .3s all ease-in-out;
+    &:hover{
+        color: $dark2;
+        background-color: $light2;
+    }
+}
+
+.btn-active{
+    background-color: $primary;
+    color: $light1;
+}

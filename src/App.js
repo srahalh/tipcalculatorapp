@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import ContextProvider from "./context/Contex";
+import Bill from "./components/Bill";
+import Buttons from "./components/Buttons";
+import Display from "./components/Display";
+import NumPeople from "./components/NumPeople";
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <ContextProvider>
+    <div className="container__wrapper">
+      <h1 className="text__h1">S P L I<br/>T T E R</h1>
+      <div className="container__main">  
+          <div>
+            <Bill />
+            <Buttons />
+            <NumPeople />
+          </div>
+          <div className="container__display">
+            <Display />
+          </div>
+      </div>
     </div>
+    </ContextProvider>
   );
 }
 
